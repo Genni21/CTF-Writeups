@@ -1,0 +1,9 @@
+(This is the unintended)
+
+Looking at the challenge, looking at the name Gaston La Paffe and taking the first letters of the words, we get "GLP".
+Looking on the internet, we come across a single paper on this signature scheme, GLP, based on RLWE (which is also not
+reccomended anymore today, and has been substitued by a variant called GLYPH). GLP works in a cyclotomic ring, in our case
+all the operations are done in a polynomial quotient ring, Z_q[x]/(x^n+1). The polynomial quotient rings where the underlying structure
+is a field (aka q is prime) are known as Euclidean rings, and in those rings is defined a division with remainder, and a multiplicative inverse.
+Taking the first signature, we realise that z1 = s1*c + y1, meaning that s1 = (z1-y1) * c^-1. This way we get c1. Now, 
+t = a * s1 + s2, meaning s2 = t - a * s1. Now we have both s1 and s2, time to decrypt ^^.
