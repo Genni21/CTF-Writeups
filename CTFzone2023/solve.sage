@@ -96,7 +96,7 @@ def nonsquarefree(hsh, p, P, E):
 Fq = GF(q)
 b = 715007269373311787545362300121277285376352080834761325372306735370567249410
 P.<k1, k2> = PolynomialRing(ZZ)
-nthreads = 8
+nthreads = 32
 
 dic = dict()
 for ntrial in range(500):
